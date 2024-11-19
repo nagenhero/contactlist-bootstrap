@@ -1,13 +1,13 @@
 .wrapper
 {
     height: 100vh;
-    background: url(./assets/back.jpg) no-repeat center;
+    background: url("./assets/back.jpg") no-repeat center;
     background-size: cover;
     /* backdrop-filter: (3px); */
 }
 .phone
 {
-    background: url(./assets/back4.jpg) no-repeat center;
+    background: url("./assets/back4.jpg") no-repeat center;
  
     background-size: cover;
    
