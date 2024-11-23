@@ -221,12 +221,20 @@ const displayContactList =(userList)=>
                 <span>${item.name.title}${item.name.first} ${item.name.last}</span>
             </div>
             <div>
+            <a href ="tel:+61484606110">
+                <i class="bi bi-phone"></i>
+                <span>0484606110</span>
+                </a>
+            <a href ="tel:${item.cell}">
                 <i class="bi bi-phone"></i>
                 <span>${item.cell}</span>
+                </a>
             </div>
             <div>
-                <i class="bi bi-envelope"></i>
-                <span>${item.email}/span>
+            <a href="mailto:${item.email}">  <i class="bi bi-envelope"></i>
+                <span>${item.email}</span>
+                </a>
+                
             </div>
             <div>
                 <i class="bi bi-geo-alt"></i>
@@ -279,4 +287,10 @@ const displayContactListScreen= async()=>
   //populate contact list
 
   displayContactList(contactList);
+}
+
+const displayLockScreen =() =>
+{
+  slider.value = 0;
+  displayScreen('lockScreen');
 }

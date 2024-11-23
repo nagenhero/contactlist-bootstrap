@@ -12,8 +12,22 @@
 <body>
   
     <div class="wrapper d-flex justify-content-center align-items-center" >
-        <div class="phone bg-white rounded-4 text-white shadow-lg overflow-y-scroll" data-tilt-scale="1.1" >
+      
+
+            <!-- <video width="320" height="240" autoplay>
+  <source src="./assets/v1.mp4" type="video/mp4">
+ 
+  Your browser does not support the video tag.
+            </video> -->
+            
+        <div class="phone bg-white rounded-5 text-white shadow-lg overflow-y-scroll" data-tilt-scale="1.1" ondblclick="displayLockScreen()" >
             <!--  -->
+           <video width="auto" height="100%" autoplay muted loop id="myVideo">
+  <source src="./assets/v1.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+      </video>
+      <div class="wall">
+         
             <div id="notification" class="notification d-flex justify-content-between p-2">
                 <span>10:10</span>
                 <div class="bg-dark w-25 rounded-pill"></div>
@@ -26,8 +40,8 @@
 
             </div>
             <!-- unlcok screen -->
-            <main id="lockScreen "  class="screen h-100 position-relative">
-                <div class="sliderContainer p-2  rounded-3 m-3 position-relative" >
+            <main id="lockScreen"  class="screen h-100 position-relative">
+                <div class="sliderContainer p-2  rounded-5 m-3 position-relative" >
                   <audio id="myAudio">
   <source src="horse.wav" type="audio/ogg">
   
@@ -36,19 +50,19 @@
                     <input type="range" id="slider" class="slider w-100" min="0" max="100" value="0" onclick="playAudio()"  >
                     
                     
-                    <label class="slider-label text-primary position-absolute"> slide to unlock
+                    <label class="slider-label  position-absolute"> slide to unlock
                         <span class="video1">
-                   <video  width="25" height="25" preload="none" style="background: transparent  url('https://cdn-icons-png.flaticon.com/512/14625/14625560.png') 50% 50% / fit no-repeat;" autoplay="autoplay" loop="true" muted="muted" playsinline="">
+                   <!-- <video  width="25" height="25" preload="none" style="background: transparent  url('https://cdn-icons-png.flaticon.com/512/14625/14625560.png') 50% 50% / fit no-repeat;" autoplay="autoplay" loop="true" muted="muted" playsinline="">
         <source src="https://cdn-icons-mp4.flaticon.com/512/14625/14625560.mp4" type="video/mp4">
-    </video>        
+    </video>         -->
 </span> </label>
 
                     
                 </div>
             </main> 
            <!--appscreen-->
-             <main id="appScreen" class="screen h-100">
-                      <div class="d-flex flex-column justify-content-center align-items-center">
+             <main id="appScreen" class="screen">
+                      <div  class="d-flex appcolumn flex-column justify-content-center align-items-center">
                <div class="bg-white music text-danger p-3 mt-4 rounded-3">
                 <audio id="myAudio1">
   <source src="song.mp3" type="audio/ogg">
@@ -115,6 +129,9 @@
                </div>
             </main>
         </div>
+        </div>
+        <!-- wall end -->
+
 
     </div>
   
